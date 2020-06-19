@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+	margin: 0;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.2rem;
+	color: black;
+	min-height: 100vh;
+}
+.main-body{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+.left-section{
+    margin-top: 2rem;
+}
+.title{
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 1rem;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-left: 0rem;
+    margin-bottom: 3rem;
+    width: 60%;
+    color: hsl(0, 6%, 24%);
+}
+.title span{
+    font-weight: 300;
+    display: block;
+    color: hsl(0, 36%, 70%);
+}
+.hero-img{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    background-size: contain;
+}
+.pattern{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(135deg, hsl(0, 100%, 98%) 100%, hsl(0, 0%, 100%) 50%);
+}
+.section{
+    margin-top: 50px;
+    margin-left: 140px;
+    margin-right: 100px;
+}
+.main-section{
+    width: 400px;
+}
+.text-body{
+    margin: 0 auto 2rem auto;
+    width: 98%;
+    color: hsl(0, 36%, 70%);
+    font-size: .9rem;
+    padding: 0;
+    line-height: 1.8;
+}
+.main-header{
+    margin-bottom: 100px;
+    margin-left: 2.5rem;
+}
+.call-to-action{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+.form{
+    display: inline-block;
+    justify-content: start;
+    align-items: center;
+    margin-left: -.2rem; 
+    width: 400px;
+    padding: 0;
+    display: flex;
+}
+.input-form{
+    display: inline-block;
+    padding: 1rem 0 1rem 1.8rem;
+    border: 1px solid hsla(0, 6%, 24%, .2);
+    border-right: none;
+    border-radius: 5rem 0 0 5rem;
+    background-color: transparent;
+    position: relative;
+    width: 80%;
+    outline: none;
+}
+.input-form:focus:valid{
+    border: 2px solid hsl(0, 93%, 68%);
+    background-image: url(images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    background-position: 16rem center;
+    border-right: none;
+}
+.input-form:focus{
+    outline: none;
+    border-right: none;
+}
+.input-form::placeholder{
+    color: hsla(0, 36%, 70%, .5);
+}
+.input-button{
+    background: linear-gradient(135deg, hsl(0, 80%, 86%) 50%, hsl(0, 74%, 74%) 100%);
+    box-shadow: 0 10px 15px hsla(0, 74%, 74%, 0.4);
+    border: none;
+    height: 3.2rem;
+    width: 5.3rem;  
+    border-radius: 5rem;
+    margin-left: -1.5rem;
+    z-index: 1;
+    cursor: pointer;
+}
+.input-button:focus{
+    outline: none;
+}
+.input-button:hover{
+    box-shadow: 0 10px 15px rgba(238, 140, 140, .6);
+}
+.attribution {
+    font-size: .8rem;
+    margin-bottom: 0;
+    position: fixed;
+    bottom: 5vh;
+    left: 10vw;
+  }
+  
+  .attribution a {
+    color: hsl(0, 6%, 24%);
+  }
+  .mobile{
+      display: none;
+  }
+  .form__error-alert {
+    font-size: .8rem;
+    color: hsl(0, 93%, 68%);
+    margin: .5rem 0 1rem 4rem;
+    text-align: left;
+    
+  }
+
+  @media(max-width: 900px){
+      .desktop-img{
+          display: none;
+      }
+      .main-body{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background: linear-gradient(135deg, hsl(0, 0%, 100%) 50%, hsl(0, 100%, 98%) 100%);
+          background-repeat: no-repeat;
+      }
+      .section{
+          display: flex;
+          flex-direction: column;
+          align-items: center; 
+      }
+      .mobile{
+          display: flex;
+          flex-direction: column;
+          align-self: center;
+      }
+      .pattern{
+          display: none;
+      }
+      .main-section{
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+      }
+  }
